@@ -1,0 +1,5 @@
+first_value = input("Enter first value> ")
+second_value = input("Enter second value> ")
+third_value = input("Enter third value> ")
+result_str = int(first_value + second_value + third_value)
+print(result_str)
