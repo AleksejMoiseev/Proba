@@ -1,6 +1,6 @@
 start_value = int(input("Enter start value> "))
 end_value = int(input("Enter finish value> "))
-assert start_value !=end_value, "Введите отличные друг от друга значения"
+assert start_value != end_value, "Введите отличные друг от друга значения"
 start = start_value
 end = end_value
 if end_value < start_value:
