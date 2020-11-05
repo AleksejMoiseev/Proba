@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd81a76f-37fd-4f48-8552-77cf9df31c04" name="Default Changelist" comment="">
+      <change beforePath="$USER_HOME$/PycharmProjectsgitignore.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Proba.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proba.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python_Homework/1.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,16 +42,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1dHCjPcGwuEqelWMMkwwBRzmBOr" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Уроки по HTML" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -61,8 +68,8 @@
       <recent name="$PROJECT_DIR$/Уроки по HTML" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.lesson3_indeHW">
-    <configuration name="Lesson 2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.HW3">
+    <configuration name="HW3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Proba" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -70,11 +77,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python Lesson/lesson 10" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python_Homework/Python_HW4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python Lesson/lesson 10/Lesson 2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python_Homework/Python_HW4/HW3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,14 +176,15 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.HW3" />
         <item itemvalue="Python.lesson3_indeHW" />
         <item itemvalue="Python.lesson_2" />
         <item itemvalue="Python.lesson_1" />
         <item itemvalue="Python.lesson 3_file" />
-        <item itemvalue="Python.Lesson 2" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -202,7 +210,14 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="345" y="79" width="732" height="637" key="#Inspections" timestamp="1604467549371">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="345" y="79" width="732" height="637" key="#Inspections/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1604467549371" />
     <state x="403" y="167" width="251" height="266" key="#Notifications" timestamp="1600079081808">
       <screen x="67" y="27" width="933" height="549" />
     </state>
@@ -227,21 +242,25 @@
       <screen x="67" y="27" width="933" height="549" />
     </state>
     <state x="311" y="59" width="424" height="484" key="FileChooserDialogImpl/67.27.933.549@67.27.933.549" timestamp="1599676988757" />
-    <state width="910" height="120" key="GridCell.Tab.0.bottom" timestamp="1603726572861">
-      <screen x="67" y="27" width="933" height="549" />
+    <state width="1276" height="175" key="GridCell.Tab.0.bottom" timestamp="1604520819129">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
+    <state width="1276" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1604520819129" />
     <state width="910" height="120" key="GridCell.Tab.0.bottom/67.27.933.549@67.27.933.549" timestamp="1603726572861" />
-    <state width="910" height="120" key="GridCell.Tab.0.center" timestamp="1603726572861">
-      <screen x="67" y="27" width="933" height="549" />
+    <state width="1276" height="175" key="GridCell.Tab.0.center" timestamp="1604520819128">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
+    <state width="1276" height="175" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1604520819128" />
     <state width="910" height="120" key="GridCell.Tab.0.center/67.27.933.549@67.27.933.549" timestamp="1603726572861" />
-    <state width="910" height="120" key="GridCell.Tab.0.left" timestamp="1603726572860">
-      <screen x="67" y="27" width="933" height="549" />
+    <state width="1276" height="175" key="GridCell.Tab.0.left" timestamp="1604520819128">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
+    <state width="1276" height="175" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1604520819128" />
     <state width="910" height="120" key="GridCell.Tab.0.left/67.27.933.549@67.27.933.549" timestamp="1603726572860" />
-    <state width="910" height="120" key="GridCell.Tab.0.right" timestamp="1603726572861">
-      <screen x="67" y="27" width="933" height="549" />
+    <state width="1276" height="175" key="GridCell.Tab.0.right" timestamp="1604520819128">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
+    <state width="1276" height="175" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1604520819128" />
     <state width="910" height="120" key="GridCell.Tab.0.right/67.27.933.549@67.27.933.549" timestamp="1603726572861" />
     <state width="910" height="132" key="GridCell.Tab.1.bottom" timestamp="1603128931776">
       <screen x="67" y="27" width="933" height="549" />
@@ -259,9 +278,10 @@
       <screen x="67" y="27" width="933" height="549" />
     </state>
     <state width="910" height="132" key="GridCell.Tab.1.right/67.27.933.549@67.27.933.549" timestamp="1603128931776" />
-    <state x="67" y="27" width="923" height="549" key="SettingsEditor" timestamp="1603305195951">
-      <screen x="67" y="27" width="933" height="549" />
+    <state x="67" y="27" width="923" height="549" key="SettingsEditor" timestamp="1604467475501">
+      <screen x="67" y="27" width="1299" height="741" />
     </state>
+    <state x="67" y="27" key="SettingsEditor/67.27.1299.741/1366.0.1024.768@67.27.1299.741" timestamp="1604467475501" />
     <state x="67" y="27" width="923" height="549" key="SettingsEditor/67.27.933.549@67.27.933.549" timestamp="1603305195951" />
     <state x="167" y="125" width="733" height="351" key="dock-window-1" timestamp="1602527034793">
       <screen x="67" y="27" width="933" height="549" />
