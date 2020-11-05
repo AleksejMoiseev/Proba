@@ -31,13 +31,20 @@ def print_all_players(list_players):  # Функция печати всех и�
 def search_player(name):  # функция печати всех игроков
     for person in main_list_basketball_player:
         if (name in person["first_name"]) or (name in person["last_name"]):
-            print(f"Найденный спортсмен - {person}")
+            print_one_player(dic=person)
+            return person
 
 
 def save_players():
     pass
 
 
+def remove_player(name):
+    name_players = search_player(name=name)
+    print(main_list_basketball_player.index(name_players))  # нашли индекс в главном maine для удаления
+
+
 #print_one_player(main_list_basketball_player[0])
 #print_all_players(main_list_basketball_player)
 #search_player("Расселл")
+remove_player("Ларри")
