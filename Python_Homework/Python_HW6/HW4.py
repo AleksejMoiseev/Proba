@@ -14,13 +14,13 @@ for player in list_all_basketball_player:
     main_list_basketball_player.append(dict_player)
 
 
-def print_one_player(dic):
+def print_one_player(dic):  # Функция печати одного игрока
     print(f"---- Имя ---- Фамилия ---- День рождения ---- Рост")
     print(f"--- {dic['first_name']} --- {dic['last_name']} --- "
           f"--- {dic['birth_year']} -------- {dic['height']}")
 
 
-def print_all_players(list_players):
+def print_all_players(list_players):  # Функция печати всех игроков
     counter = 1
     for player_dic in list_players:
         print(f"№ {counter}")
@@ -28,5 +28,16 @@ def print_all_players(list_players):
         counter = counter + 1
 
 
+def search_player(name):  # функция печати всех игроков
+    for person in main_list_basketball_player:
+        if (name in person["first_name"]) or (name in person["last_name"]):
+            print(f"Найденный спортсмен - {person}")
+
+
+def save_players():
+    pass
+
+
 #print_one_player(main_list_basketball_player[0])
-print_all_players(main_list_basketball_player)
+#print_all_players(main_list_basketball_player)
+#search_player("Расселл")
