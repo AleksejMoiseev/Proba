@@ -31,5 +31,5 @@ while flag:
         result_text = result_text + file_read(file) + " "
 
 print(result_text)
-with open("3.txt","wt") as file_result:
+with open("3.txt", "wt") as file_result:
     file_result.write(result_text)
