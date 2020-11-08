@@ -57,10 +57,24 @@ def search_player(name):  # функция поиска игрока по име
 
 
 def save_players():
-    pass
+    with open("new_players_file.txt", "w+") as file:
+        for dic in main_list_basketball_player:
+           player = ",".join(dic.values())
+           file.write(player + "\n")
 
 
-def remove_player(name=""):
+def sort_height_player():
+    counter = 0
+    print("Список трех самых высоких баскетболиста : ")
+    main_list = sorted(main_list_basketball_player, key=lambda k: k['height'], reverse=True)
+    for person in main_list:
+        print_one_player(dic=person)
+        counter += 1
+        if counter >= 3:
+            return 0
+
+
+def remove_player(name=""):  # Удаление игрока
     if not name:
         name = input("Введите имя или фамилию для удаления игрока > ")
         name_players = search_player(name=name)
