@@ -48,14 +48,18 @@ def new_player_add():  # функция добавления нового игр
         "birth_year": birth_year,
         "height": height,
     })
+    print("Игрок добавлен")
 
 
-def search_player(name):  # функция поиска игрока по имени
+def search_player(name=""):  # функция поиска игрока по имени
+    if name == "":
+        name = input("Введите имя или фамилию для поиска игрока в словаре > ")
     for person in main_list_basketball_player:
         if (name.lower() in person["first_name"].lower()) or \
                 (name.lower() in person["last_name"].lower()):
             print_one_player(dic=person)
             return person
+    print("Внимание игрок в словаре отсутсвует")
     return 1
 
 
@@ -64,6 +68,7 @@ def save_players():
         for dic in main_list_basketball_player:
            player = ",".join(dic.values())
            file.write(player + "\n")
+    print("Изменения сохранены")
 
 
 def sort_height_player():
@@ -88,12 +93,59 @@ def remove_player(name=""):  # Удаление игрока
         return name_players
     index_player = main_list_basketball_player.index(name_players)  # нашли индекс в главном maine для удаления
     rm_player = main_list_basketball_player.pop(index_player)
+    print("Удален")
     return rm_player
 
-#print_one_player(main_list_basketball_player[0])
-#print_all_players(main_list_basketball_player)
-#search_player("Расселл")
-#new_player_add()
-# print_all_players()
-# remove_player()
-# print_all_players()
+
+def choice():
+    flag = True
+    while flag:
+        choice_value = int(input("Введите Ваш выбор > "))
+        if choice_value == -1:
+            return -1
+        try:
+            if (choice_value >= 1) and (choice_value <= 8):
+                raise Exception("Разрешенный диапазон данных от 1 до 8, -1 для выхода")
+        except Exception:
+            flag = False
+    return choice_value
+
+
+def main():
+    make_list()
+    print("*" * 10, "Добро пожаловать в супер словарь", "*" * 10)
+    print("Программа предлагает выбрать следующие возможности :")
+    print("1. - Считать из файла всех баскетболистов")
+    print("2. - Вывести на экран красиво данные одного баскетболиста")
+    print("3. - Вывести данные всех баскетболистов")
+    print("4. - Сохранить изменения в файл")
+    print("5. - Поиск баскетболиста по имени или фамилии")
+    print("6. - Вывод на экран тройки самых высоких игрока")
+    print("7. - Удалить из списка баскетболиста")
+    print("8. - Добавить баскетболиста в список великих")
+    print("Выход. - выбрать '-1'")
+
+    while True:
+        choice_result = choice()
+        if choice_result == -1:
+            return -1
+        if choice_result == 1:
+            make_list()
+        elif choice_result == 2:
+            print_one_player()
+        elif choice_result == 3:
+            print_all_players()
+        elif choice_result == 4:
+            save_players()
+        elif choice_result == 5:
+            search_player()
+        elif choice_result == 6:
+            sort_height_player()
+        elif choice_result == 7:
+            remove_player()
+        elif choice_result == 8:
+            new_player_add()
+
+
+if __name__ == '__main__':
+    main()
