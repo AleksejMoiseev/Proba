@@ -3,21 +3,25 @@
 """
 main_list_basketball_player = []
 
-with open("basketballmen.txt", "r") as file:
-    file_text = file.read()
-list_all_basketball_player = file_text.split("\n")
 
-for player in list_all_basketball_player:
-    tuple_player = tuple(player.split(","))
-    dict_player = dict(first_name=tuple_player[0], last_name=tuple_player[1],
-                       birth_year=tuple_player[2], height=tuple_player[3])
-    main_list_basketball_player.append(dict_player)
+def make_list():  # Функция считывает  и сохраняет текст в главный Лист
+    main_list_basketball_player.clear()
+    with open("basketballmen.txt", "r") as file:
+        file_text = file.read()
+    list_all_basketball_player = file_text.split("\n")
+
+    for player in list_all_basketball_player:
+        tuple_player = tuple(player.split(","))
+        dict_player = dict(first_name=tuple_player[0], last_name=tuple_player[1],
+                           birth_year=tuple_player[2], height=tuple_player[3])
+        main_list_basketball_player.append(dict_player)
 
 
 def print_one_player(dic):  # Функция печати одного игрока
     print(f"---- Имя ---- Фамилия ---- День рождения ---- Рост")
     print(f"--- {dic['first_name']} --- {dic['last_name']} --- "
           f"--- {dic['birth_year']} -------- {dic['height']}")
+    print()
 
 
 def print_all_players():  # Функция печати всех игроков
