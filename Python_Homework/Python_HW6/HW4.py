@@ -20,15 +20,29 @@ def print_one_player(dic):  # Функция печати одного игро�
           f"--- {dic['birth_year']} -------- {dic['height']}")
 
 
-def print_all_players(list_players):  # Функция печати всех игроков
+def print_all_players():  # Функция печати всех игроков
     counter = 1
-    for player_dic in list_players:
+    for player_dic in main_list_basketball_player:
         print(f"№ {counter}")
         print_one_player(player_dic)
         counter = counter + 1
 
 
-def search_player(name):  # функция печати всех игроков
+def new_player_add():  # функция добавления нового игрока
+    print("Добавление нового игрока в команду: ")
+    first_name = input("Введите имя нового игрока > ")
+    last_name = input("Введите фамилию нового игрока > ")
+    birth_year = input("Введите год рождения нового игрока > ")
+    height = input("Введите рост нового игрока > ")
+    main_list_basketball_player.append({
+        "first_name": first_name,
+        "last_name": last_name,
+        "birth_year": birth_year,
+        "height": height,
+    })
+
+
+def search_player(name):  # функция поиска игрока по имени
     for person in main_list_basketball_player:
         if (name in person["first_name"]) or (name in person["last_name"]):
             print_one_player(dic=person)
