@@ -17,11 +17,14 @@ def make_list():  # Функция считывает  и сохраняет т�
         main_list_basketball_player.append(dict_player)
 
 
-def print_one_player(dic):  # Функция печати одного игрока
-    print(f"---- Имя ---- Фамилия ---- День рождения ---- Рост")
-    print(f"--- {dic['first_name']} --- {dic['last_name']} --- "
-          f"--- {dic['birth_year']} -------- {dic['height']}")
-    print()
+def print_one_player(dic={}):  # Функция печати одного игрока
+    if len(dic.values()) == 0:
+        dic = search_player()
+    else:
+        print(f"---- Имя ---- Фамилия ---- День рождения ---- Рост")
+        print(f"--- {dic['first_name']} --- {dic['last_name']} --- "
+              f"--- {dic['birth_year']} -------- {dic['height']}")
+        print()
 
 
 def print_all_players():  # Функция печати всех игроков
