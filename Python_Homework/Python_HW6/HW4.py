@@ -63,7 +63,7 @@ def search_player(name=""):  # функция поиска игрока по и�
     return 1
 
 
-def save_players():
+def save_players():  # Функция сохранения изменений в текстовый файл
     with open("new_players_file.txt", "w+") as file:
         for dic in main_list_basketball_player:
            player = ",".join(dic.values())
@@ -71,11 +71,11 @@ def save_players():
     print("Изменения сохранены")
 
 
-def sort_height_player():
+def sort_height_player():  # Функция сортировки по ' По росту'
     counter = 0
     print("Список трех самых высоких баскетболиста : ")
-    main_list = sorted(main_list_basketball_player, key=lambda k: k['height'], reverse=True)
-    for person in main_list:
+    sort_list = sorted(main_list_basketball_player, key=lambda k: k['height'], reverse=True)
+    for person in sort_list:
         print_one_player(dic=person)
         counter += 1
         if counter >= 3:
@@ -97,7 +97,7 @@ def remove_player(name=""):  # Удаление игрока
     return rm_player
 
 
-def choice():
+def choice():  # Функция выбора
     flag = True
     while flag:
         choice_value = int(input("Введите Ваш выбор > "))
@@ -111,7 +111,7 @@ def choice():
     return choice_value
 
 
-def main():
+def main():  # Главная функция
     make_list()
     print("*" * 10, "Добро пожаловать в супер словарь", "*" * 10)
     print("Программа предлагает выбрать следующие возможности :")
