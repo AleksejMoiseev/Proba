@@ -26,6 +26,7 @@ def print_all_players():  # Функция печати всех игроков
         print(f"№ {counter}")
         print_one_player(player_dic)
         counter = counter + 1
+    print()
 
 
 def new_player_add():  # функция добавления нового игрока
@@ -44,21 +45,34 @@ def new_player_add():  # функция добавления нового игр
 
 def search_player(name):  # функция поиска игрока по имени
     for person in main_list_basketball_player:
-        if (name in person["first_name"]) or (name in person["last_name"]):
+        if (name.lower() in person["first_name"].lower()) or \
+                (name.lower() in person["last_name"].lower()):
             print_one_player(dic=person)
             return person
+    return 1
 
 
 def save_players():
     pass
 
 
-def remove_player(name):
-    name_players = search_player(name=name)
-    print(main_list_basketball_player.index(name_players))  # нашли индекс в главном maine для удаления
-
+def remove_player(name=""):
+    if not name:
+        name = input("Введите имя или фамилию для удаления игрока > ")
+        name_players = search_player(name=name)
+    else:
+        name_players = search_player(name=name)
+    if name_players == 1:
+        print("Указаного игрока в списке нет")
+        return name_players
+    index_player = main_list_basketball_player.index(name_players)  # нашли индекс в главном maine для удаления
+    rm_player = main_list_basketball_player.pop(index_player)
+    return rm_player
 
 #print_one_player(main_list_basketball_player[0])
 #print_all_players(main_list_basketball_player)
 #search_player("Расселл")
-remove_player("Ларри")
+#new_player_add()
+# print_all_players()
+# remove_player()
+# print_all_players()
