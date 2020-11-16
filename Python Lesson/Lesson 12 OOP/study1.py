@@ -28,3 +28,5 @@ class Stack:
 
 if __name__ == '__main__':
     s = Stack()
+    # Даёт доступ к атрибутом класса __dict__ вывод:{'_container': []}
+    print(s.__dict__)
