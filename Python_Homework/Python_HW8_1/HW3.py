@@ -53,7 +53,6 @@ class Book:
                f"Жанр: ----------- {self.__genre}"
 
 
-
 """
 Реализуйте класс Library. Класс будет содержать объекты класса «Book»
 Имплементировать следующие методы:
@@ -64,7 +63,6 @@ class Book:
 ○ new_books() - книги выпущенные в этом году (текущий год должен
 быть выбран актуальным, не hardcoded 2020)
 ○ __str__
-
 """
 
 
@@ -83,12 +81,10 @@ class Library:
             return print(f"Object deleted - {book_obj}")
         return print("Function don`t know this object")
 
-
     def find_book_by_name(self, name):
         for book in self.library:
             if name in book.name_book:
-                index = self.library.index(book)
-                return self.library[index]
+                return book
             return "Книга не найдена"
 
     def get_all_books_by_author(self, author):
@@ -103,7 +99,16 @@ class Library:
 
     @staticmethod
     def year_now():
-         return datetime.date.today().year
+        year_today = datetime.date.today().year
+        return year_today
+
+    def __str__(self):
+        result_str = ""
+        for book in self.library:
+            result_str = result_str + book.name_book + ", " + f"{book.year_of_issue}" \
+                         + ", " + book.genre + "\n"
+        print()
+        return result_str
 
 
 book1 = Book("first", 1934, "fant1934", 1123456)
