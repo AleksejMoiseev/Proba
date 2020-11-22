@@ -6,7 +6,7 @@
 отдельным полям через методы класса.
 """
 import datetime
-from Python_Homework.Python_HW8_1.OOP3 import Writer
+from Python_Homework.Python_HW9.OOP3 import Writer
 
 
 class Book(Writer):
@@ -114,7 +114,7 @@ class Library:
     def print_obj_list(arr):
         if not len(arr):
             return print("Запрошенных книг нет в библиотеке")
-        print("Запрошенные обькты: ")
+        print("Запрошенные обьeкты: ")
         for element in arr:
             print(element, end="\n\n")
 
