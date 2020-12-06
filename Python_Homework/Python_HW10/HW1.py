@@ -104,7 +104,7 @@ class Parrot(HomeAnimal):
 
 
 def main():
-    myrka = Cat("Myrka", "White")
+    myrka = Cat("Мурка", "White")
     sharik = Dog(name="Шарик", color="Серо-буро-малиновый")
     dysya = Hamster(name="Дуся", color="Коричневый")
     kesha = Parrot(name="Инокентий", color="Разноцветный")
