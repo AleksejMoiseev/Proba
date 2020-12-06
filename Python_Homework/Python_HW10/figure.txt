@@ -1,0 +1,3 @@
+{'figure': 'Rectangle', 'sideA': 5, 'sideB': 10}
+{'figure': 'Square', 'sideA': 5}
+{'figure': 'Circle', 'point': (2, 5), 'radius': 10}
