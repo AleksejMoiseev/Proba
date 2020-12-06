@@ -6,6 +6,7 @@
 методы класса для выполнения арифметических операций (сложение,
 вычитание, умножение, деление, и т.д.).
 """
+import math
 
 
 class Fraction:
@@ -49,13 +50,50 @@ class Fraction:
             f"---\n" \
             f" {self._denominator}"
 
+    @staticmethod
+    def gcd(x, y):
+        z = math.gcd(x, y)
+        x = int(x / z)
+        y = int(y / z)
+        return x, y
+
     def __add__(self, other):
-        x = self._numerator + other.numerator
-        y = self._denominator + other.denominator
+        x = self._numerator * other.denominator + \
+            other.numerator * self._denominator
+        y = self._denominator * other.denominator
+        x, y = Fraction.gcd(x=x, y=y)
+        return Fraction(numerator=x, denominator=y)
+
+    def __sub__(self, other):
+        x = self._numerator * other.denominator - \
+            other.numerator * self._denominator
+        y = self._denominator * other.denominator
+        x, y = Fraction.gcd(x=x, y=y)
+        return Fraction(numerator=x, denominator=y)
+
+    def __mul__(self, other):
+        x = self._numerator * other.numerator
+        y = self._denominator * other.denominator
+        x, y = Fraction.gcd(x=x, y=y)
+        return Fraction(numerator=x, denominator=y)
+
+    def __truediv__(self, other):
+        x = self._numerator * other.denominator
+        y = self._denominator * other.numerator
+        x, y = Fraction.gcd(x=x, y=y)
         return Fraction(numerator=x, denominator=y)
 
 
-d = Fraction(1, 0)
-d.denominator = 2
-d1 = Fraction(1, 2)
+if __name__ == '__main__':
+    d = Fraction(1, 2)
+    d1 = Fraction(1, 2)
+    print(d + d1)
+    print("*" * 5)
+    print(d - d1)
+    print("*" * 5)
+    print(d / d1)
+    print("*" * 5)
+    print(d * d1)
+
+
 
