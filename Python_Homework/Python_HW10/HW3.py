@@ -99,7 +99,7 @@ def main():
     Считываем фигуры в новый лист "end_list"
     """
     end_list = []
-    with open("figure.txt", "r+") as  file:
+    with open("figure.txt", "r+") as file:
         for line in file:
             line_dict = ast.literal_eval(line)
             end_list.append(line_dict)
