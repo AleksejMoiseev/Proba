@@ -89,7 +89,7 @@ class Library:
         for book in self.library:
             if name in book.name_book:
                 return book
-            return "Книга не найдена"
+        return "Книга не найдена"
 
     def get_all_books_by_author(self, author):
         list_author = []
