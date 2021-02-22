@@ -5,7 +5,7 @@ from mvc_movie.view import View
 def main():
     view = View()
     view.show_all()
-    peter = Actor(name="Peter", last_name="First")
+    peter = [Actor(name="Peter", last_name="First")]
     movie_obj = Movie(title="First Peter", date_realized=2020, actor=peter)
     view.add_movie(movie_obj)
     view.show_all()

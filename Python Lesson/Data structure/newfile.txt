@@ -1,1 +1,1 @@
-Привет, новый, файл
+{'type': 'A', 'field': 'value1', 'field1': 'value2'}
