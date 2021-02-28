@@ -1,0 +1,43 @@
+/etc/hosts - write all hosts for DNC link with site:
+
+127.0.0.1       mysite.local
+
+server {
+        listen 80;
+        server_name mysite.local;
+        location / {
+                root /home/aleksei/Python_project/exampleShop;
+ #               #add_header Content-Type text/plain; (allows you, to print text in brouser)
+                index index.html;
+                
+        }
+}
+
+fail creating allow the path:  /etc/nginx/sites-enabled
+
+
+
+
+
+
+
+to work with multuple web-server:
+
+in config to write in file:
+
+/etc/nginx/nginx.conf
+
+to section HTTP write:
+
+upstream name_upstraem {
+        
+        server 127.0.0.1:number_port1(8000);
+        server 127.0.0.1:number_port2(8001);
+        server 127.0.0.1:number_port3(8002);
+}
+
+location / {
+
+         proxy_pass http://name_upstraem
+}
+

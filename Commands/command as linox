@@ -1,0 +1,29 @@
+Установка nginx, php, mysql в ОС Linux:
+
+Сначала обновляем репозиториии:
+sudo apt-get update
+
+Устанавалием nginx - локальный хостинг
+sudo apt-get install nginx
+
+Устанавливаем mysql:
+sudo apt-get install mysql-server
+
+Устанавливаем php:
+sudo apt-get install php7.0 php7.0-fpm
+
+Если возникают проблемы с установкой, используем команды (иначе пропускаем):
+sudo apt-add-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install php7.0 php7.0-fpm
+cat default |greb all  -  open faile default and serch their  all name "all"
+
+ss -tnlp - full iformation for working server
+
+ps -efl | grep nginx  shows all procecces and searches among them nginx
+
+Установка зависимости в проект :
+ в проекте сщздается файл откуда считываются все зависимости:
+ reguirements.txt
+
+pip install -r reguirements.txt

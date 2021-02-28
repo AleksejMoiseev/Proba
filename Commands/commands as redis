@@ -1,0 +1,31 @@
+check install redis:
+ redis-cli вход в консоль редис
+ 
+ set - set value
+ get - get value
+ append - add value to ...
+ getset - get value and set value one moment
+ Hset key name_value value - for working with value of dictionary
+ Hget key - for working with value of dictionary
+ Hgetall key - get all value keys fnd value
+ Hkeys key - get all keys
+ Hvals key - get all values
+ Sadd key - set add lostof 
+ Smembers key - vie all value contains
+ Scard key - how many value the set contains
+ 
+ Sadd key value - add in contains  other value
+ 
+ Sunion first_contaiher second_container
+ Sdiff  first_contaiher second_container
+ Sinter first_contaiher second_container
+ 
+ Spop key 1 - удаляет 1 случайный элемент множества и возвращает его 
+ 
+ SisMember key value - Проверяет входит ли значение VALUE во множество key
+ 
+ llen key -  длина списка 
+ 
+ FLUSHall - Очищение базы данных редис полностью
+ 
+ 
