@@ -1,7 +1,5 @@
 import pytest
-from HW_pt_basketballplayer.HW14 import BasketballPlayer
-
-
+from HW_pt_basketballplayer.HW14 import BasketballPlayer, BasketballTeam
 
 
 @pytest.fixture
@@ -16,6 +14,8 @@ def test_basic(make_player, name, last_name, birth_year, height):
     assert make_player.name == name
     assert make_player.last_name == last_name
 
-def test_proba():
-    assert 1 == 1
 
+def test_add_player(make_player):
+    team = BasketballTeam()
+    team.add_player(player=make_player)
+    assert team.search_player(basketballplayer=make_player) == make_player
