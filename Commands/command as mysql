@@ -1,2 +1,81 @@
 user mysql: exchange
 password user: exchange
+Установка mysql:
+ sudo apt update
+ sudo apt install mysql-server
+ 
+CREATE USER 'alameda' IDENTIFIED BY '1111'; установка нового пользователя mysql c именем alameda  и паролем 1111
+
+GRANT ALL PRIVILEGES ON * . * TO 'alameda';  Установка для пользователя alameda  максимальных прав уровня доступа к базе данных
+mysql -h 127.0.0.1 -P 3307 -u root -psecret
+FLUSH PRIVILEGES;  Загрузка нового пользователя в базу данных
+
+SELECT user FROM mysql.user;  Проверка всех пользователей в БД
+
+SHOW DATABASES;  Посмотреть текущие БД
+
+CREATE DATABASE mydb;  Создание базы данных с именем mydb
+
+ DROB DATABASE mydb; Удаление базы данных с именем mydb
+ 
+ SHOW TABLES; Список таблиц в нашей базе 
+ 
+ CREATE TABLE proba( id INT(5) AUTO_INCREMENT PRIMARY KEY, name VARCHAR(64));  Создание таблицы м именем  proba состоящий из 2 полей, id  с автоматическим инкрементом  и name состоящий из 64 символов 
+ 
+ SHOW CREATE TABLE proba; показать таблицу с именем  proba 
+ 
+ SELECT * FROM proba;  Показать все из таблицы proba
+ 
+ SELECT * FROM proba WHERE id='2'; Показать записи где поле id = 2
+ 
+ DESCRIBE proba;  Показать поля содержащиеся в таблице
+ 
+ UPDATE proba SET name='kuku' WHERE id='2';  Изменить таблицу proba  присвоить значение полю name='kuku' где id=2
+ 
+ DELETE FROM proba WHERE name='kuku'; удалить из proba где name='kuku'
+ 
+ SELECT COUNT(*) FROM proba;  Посчитать количество строк в таблице 
+ 
+ Путь по которому находятся таблицы:
+ 
+ /var/lib/mysql
+ 
+ help:
+ 
+ ? (\?)            Синоним слова "помощь".
+clear (\ c)        Очистить текущий оператор ввода.
+connect (\ r)      Повторно подключиться к серверу. Необязательными аргументами являются db и host.
+delimiter (\ d)    Установить разделитель операторов.
+edit (\ e)         Редактировать команду с помощью $ EDITOR.
+ego (\ G)          Отправить команду на сервер mysql, отобразить результат вертикально.
+exit (\ q)         Выйти из mysql. То же, что и бросить.
+go (\ g)           Отправить команду на сервер mysql.
+help (\ h)         Показать эту справку.
+nopager (\ n)      Отключить пейджер, печатать в стандартный вывод.
+notee (\ t)        Не пишите в Outfile.
+пейджер (\ P)      Установить ПЕЙДЖЕР [to_pager]. Распечатайте результаты запроса через PAGER.
+print (\ p)        Распечатать текущую команду.
+приглашение (\ R)   Измените приглашение mysql.
+quit (\ q)         Выйти из mysql.
+rehash (\ #)       Перестроить хэш завершения.
+источник (\.)      Выполнить файл сценария SQL. Принимает имя файла в качестве аргумента.
+status (\ s)       Получить информацию о статусе с сервера.
+system (\!)        Выполнить команду системной оболочки.
+tee (\ T)          Установить исходный файл [to_outfile]. Добавить все в данный файл.
+использовать (\ u) Использовать другую базу данных. Принимает имя базы данных в качестве аргумента.
+charset (\ C)      Перейти на другую кодировку. Может понадобиться для обработки бинлога с многобайтовыми кодировками.
+предупреждения (\ W) Показывать предупреждения после каждого оператора.
+nowarning (\ w)    Не показывать предупреждения после каждого оператора.
+resetconnection (\ x) Очистить контекст сеанса.
+query_attributes   Устанавливает строковые параметры (имя1 значение1 имя2 значение2 ...) для следующего запроса.
+
+Установка Mysqlworkbench :
+
+sudo apt install mysql-workbench-community
+запуск 
+mysql-workbench
+ 
+
+mysql -h 127.0.0.1 -P 3307 -u root -psecret
+
+

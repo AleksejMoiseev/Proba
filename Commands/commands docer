@@ -20,5 +20,7 @@ docker run -v  ~/Docer:/app1 -d nginx
     
 docker exec -it 73c7714c40ed bash Позволяет войти в процесс под root  in bash terminale и посмотреть файлы которые расположены в docker
 
+docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=secret -d mysql:latest  опредяляет переменную среды   MYSQL_ROOT_PASSWORD
+порт 3306 с именем mysql c переменной средой  скачиваем последнюю версию 
 
-    
+docker run -e MYSQL_ROOT_PASSWORD=secret -p 3307:3306 -d  mysql
