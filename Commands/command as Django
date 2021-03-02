@@ -1,0 +1,28 @@
+Start project with django:
+
+django-admin startproject name_your-project
+
+После старта создается один большой проект где мы можем размещать свои сайты или сайт или страницу или страницы ( апликации)
+
+для старта  апликации набираем команду 
+
+python manage.py startapp имя_mysait
+
+Создается пэкэдж имя_mysait, и его нужно зарегистрировать в основных настройках
+
+в папке settings основного проекта прописываем путь как на  примере:
+
+# Application definition
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'mysait.apps.MysaitConfig',  #  прописываем сюда свою апликацию
+]
+
+
+Помечаем в пайчарм коренную папку как source root

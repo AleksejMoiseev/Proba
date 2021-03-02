@@ -27,3 +27,5 @@ ps -efl | grep nginx  shows all procecces and searches among them nginx
  reguirements.txt
 
 pip install -r reguirements.txt
+
+pip list - check instaled packege  (pip3 list | grep virtual)
