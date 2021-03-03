@@ -26,3 +26,45 @@ INSTALLED_APPS = [
 
 
 Помечаем в пайчарм коренную папку как source root
+
+django-admin --help  список доступных комманд
+ check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate          Запускает все необходтмые миграции
+    runserver        Запускает сервер на основе Джанго
+    sendtestemail
+    shell            Запускается  консоль Джанго для работы  с таблицами
+    showmigrations
+    sqlflush
+    sqlmigrate        Позволяет посмотреть на таблицу после создание миграции  как она будет создана
+    sqlsequencereset
+    squashmigrations
+    startapp          Запускает апликацию на проекте где которую нужно регистрировать в основном проекте и прописывать настройки к основному проекту
+    startproject      Запускает проект на Джанго с настройками всего проекта 
+    test
+    testserver
+    
+    Назначить другой порт для Джаного можно командой:
+    
+    python manage.py runserver 127.1.1.1:4000 где 127.1.1.1 - это адресс а - 4000 это тот порт где нужно бежать джанго,  можно написать только порт тогда адрес по умолчанию будет localhost 
+    
+   просмотр записей при сохранении в таблицу пишется в редакторе shell:
+   
+   from django.db import connection
+>>> connection.queries
+
+    
+    
+
+
+
+
