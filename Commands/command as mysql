@@ -78,4 +78,19 @@ mysql-workbench
 
 mysql -h 127.0.0.1 -P 3307 -u root -psecret
 
+select * from employees limit 10;  Показать первые 10 строк из таблицы employees 
+
+select distinct firstName from employees;
+select count(*) from employees;
+select * from employees;
+select min(officeCode) from employees;
+select max(officeCode) from employees; # Ищет максимум среди поля officeCode
+select * from employees where officeCode=1;  # Ищет всех в колонке officeCode=1
+select * from employees where officeCode!=1 and officeCode=6;  # Ищет всех в колонке officeCode!=1 and officeCode=6
+select * from employees order by firstName asc;  # sort of max
+select * from employees order by firstName desc;  # sort of min
+select * from employees where firstName="Mami" or firstName="Peter";
+select * from employees where firstName in ("Mami", "Peter");
+select * from employees where officeCode between 3 and 5;
+select * from employees where lastName like '%son';
 
