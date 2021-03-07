@@ -38,7 +38,7 @@ django-admin --help  список доступных комманд
     inspectdb
     loaddata
     makemessages
-    makemigrations
+    makemigrations   Создать миграция
     migrate          Запускает все необходтмые миграции
     runserver        Запускает сервер на основе Джанго
     sendtestemail
@@ -103,6 +103,44 @@ django-admin --help  список доступных комманд
 mumber1 = MyModel.objects.get(pk=2)
 >>> mumber1.delete()
 (1, {'mysait.MyModel': 1})
+
+
+Создание суперпользователя
+
+python manage.py createsuperuser
+
+регистрируем свое приложение в файле admin.py прописываем там :
+1. импортируем свою модель из папки  models.py
+2. admin.site.regicter(MyModel)  #  где MyModel наша импортированная модел
+
+class MyModel(models.Model):  # Наследуем от класса
+
+    name_person = models.CharField(max_length=20)  # Создает текстовое поле с макс размером 20 символов
+    last_name = models.CharField(max_length=30)  # Аналогично но с 30 символами
+    age = models.IntegerField()  # сщздает поле с целыми числами
+    birth_year = models.DateField()  # поле с датой
+    photo_person = models.ImageField(upload_to='photos/%Y/')  # поле для загрузки с картинками
+    update_date = models.DateTimeField(auto_now=True)  # поле в которое записывается время измененич
+    hidden = models.BooleanField(default=True)  # пишется булево значение
+
+    def __str__(self):
+        return f" person : {self.name_person} {self.last_name}"
+
+    class Meta:
+        verbose_name = "Vip_Персона"  # Отображение в админке в единственном числе
+        verbose_name_plural = "Vip_Персоны"  # Отображение в админке во множественном числе
+        ordering = ['-age']
+        
+Собрать Всю статику в одном месте
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'myDJ/static'),
+]
+
+Запустить команду : python manage.py collectstatic
+
 
 
 
