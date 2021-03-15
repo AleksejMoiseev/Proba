@@ -5,3 +5,7 @@ virtualenv name_your_virtualenv
 Запуск виртульной среды  и виртуального окружения :
 
  source name_your_virtualenv/bin/activate   -  command running virtualenv
+ 
+Список виртуальных сред:
+
+1) testDJ;
