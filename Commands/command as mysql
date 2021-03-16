@@ -94,3 +94,19 @@ select * from employees where firstName in ("Mami", "Peter");
 select * from employees where officeCode between 3 and 5;
 select * from employees where lastName like '%son';
 
+alter table mytable add pass varchar(32);  add fields in table
+alter table mytable drop column pass;      delete column field with name pass
+
+insert into mytable (user_name, user_password, email, date_registered, in_activate) values
+('Roman', 678, 'Roman@bk.ru', '1997-3-7', '1'),
+('Julia', 678, 'Julia@bk.ru', '1992-7-3', '1'),
+('Jacov', 678, 'Jacov@bk.ru', '1995-7-7', '1');
+
+truncate name_tablle;
+select distinct user_name from mytable;
+select * from mytable limit 2; 
+select * from mytable where user_id=2 order by user_password limit 2;
+select * from mytable where user_id in (1,2,4);
+explain analyze select * from mytable where user_id=2 order by user_password limit 2;
+create index myindex On orders(orderNumber);
+
