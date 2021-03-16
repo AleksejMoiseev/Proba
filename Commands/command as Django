@@ -141,6 +141,58 @@ STATICFILES_DIRS = [
 
 Запустить команду : python manage.py collectstatic
 
+Запуск программы с определенными настройками:
+
+django-admin runserver --settings=adinch.settings.frontend_dev_myzgin    где adinch.settings.frontend_dev_myzgin это путь к файлу суттинг с настройками проекта
+
+Working to shell:
+
+MyModel.objects.all()                         get all objects  возращает лист итерабл
+MyModel.objects.filter(pk=4)                  get objects where pk=4 возращает лист итерабл
+MyModel.objects.filter(name_person="Elena")   get objects where name_person="Elena"  возращает лист итерабл
+cat = MyModel.objects.get(name_person="Elena") Запрашиваем дай мне обьект с именем Елена, важно обьект должен быть и дожен быть один, иначе рейзится эксептион, возвращает непосредственно конкретный обьект
+cat.age                                        Имеем доступ после  к всем атрибутам модели
+cat = MyModel.objects.order_by('age')
+cat = MyModel.objects.order_by('-age')
+cat = MyModel.objects.order_by('-age').reverse()
+
+cat.mymodel_set.all()  - ?
+
+from django.db.models import Q, F  Позволяет составляет составные логические фильтры для получения значений из фильтра
+query=Q(hidden=True)
+query &= Q(employed__job="Безработный") результат обоих выражний <Q: (AND: ('hidden', True), ('employed__job', 'Безработный'))>
+ MyModel.objects.filter(query)  Получаем лист обьектов согласно заданному параметру
+ 
+ MyModel.objects.filter(query).update(age=F('age')-0)  позволяет обьдейтить лист параметров на лету изменяя любые значения для этого импортируем from django.db.models import Q, F
+ MyModel.objects.filter(pk__gt=4)  Выбрать значения где РК больше 4
+ MyModel.objects.filter(pk__gte=4) выбрать значения где РК больше или равно 4
+  MyModel.objects.filter(pk__in=[1, 2, 3])  Возвращает значения с РК =[1,2,3]
+  MyModel.objects.filter(name_person__contains="El")  Ищет подстроку " EL "  в строке name_person
+   MyModel.objects.filter(name_person__icontains="El") тоже самое 
+   MyModel.objects.filter(name_person__icontains="Алексей").filter(pk__gte=2)  Сложный запрос состоит из двух фильтров используя логическое "и"
+   MyModel.objects.all().first()  
+   MyModel.objects.all().last()
+   MyModel.objects.all().earliest("update_date")   Выводит самые ранние записи
+   MyModel.objects.all().latest("update_date")     Выводит самые поздние записи
+   
+   cats=EmployedAdmin.objects.filter(pk=2)         Сначала выбираем нужную категорию во в связаной таблице получаем обьект  далле передаем его в следующую команду
+   MyModel.objects.filter(employed__in=cats)       получаем обьект из предыдущей команды и передаем его  в качестве параметра фильтра с помощью __in=
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
