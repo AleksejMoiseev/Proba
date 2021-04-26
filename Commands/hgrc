@@ -1,0 +1,6 @@
+[paths]
+default = ssh://evmyzgin@www1.dsp.byyd.me//home/hg/repos/exchange
+
+[hostfingerprints]
+;hg.dsp.byyd.me = db:78:73:5c:ba:39:d5:2b:91:6d:8d:ff:87:47:ef:c7:5b:5a:7e:cf
+
