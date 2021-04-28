@@ -1,4 +1,3 @@
-
 import datetime
 
 class NameTooLong(Exception):
