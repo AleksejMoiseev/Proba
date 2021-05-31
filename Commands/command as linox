@@ -29,3 +29,39 @@ ps -efl | grep nginx  shows all procecces and searches among them nginx
 pip install -r reguirements.txt
 
 pip list - check instaled packege  (pip3 list | grep virtual)
+
+ps aux - показывает действующие процессы 
+ps -efl - показывает действующие процессы 
+free - показывает доступную память
+cp копирует файлы
+mv перемещает файл  
+pwd   показывает текущее местоположение
+> name_fail - оператор создает новый файл с названием name_fail
+rm delete fail
+rmdir delete directory
+echo "any text" > text.txt записывает текс "any text" в text.txt 
+file name_fail показывает тип файла 
+>> добисывает в файл не перезаписывает в отличии от > 
+echo 'date; pwd; ls' > astest.txt  с помощью команды echo  записываем несколько команд  'date; pwd; ls' в файл и после запускаем их все 
+                                     с помощью команды  sh astest.txt
+kill -9 "#PId" kill process
+
+cmp myfail new_fail.txt  сравнивает файлы на равнозначночть если файлы разные выводит инфу если одинаковые ничего не вывожиит
+df показывает доступные разделы
+sudo apt-get update  обновляет  из репозитория apt
+sudo apt-get upgrate обновляет все программы до последней версии
+
+chmod 777 name_file  устанавливает права для файла где 777 максимальный доступ
+man справочная информвция 
+ cd - возвращается назад
+alias можно присвоить любую команду например alias a=pwd вводим a получаем результат pwd
+lsb_release -a дает данные об опреациоонной сиситкеме
+ hostname  имя компьютера в сети
+wc сколько строк символов  в файле
+grep( -n в какой строке, -v все кроме,   поиск строки в файлах
+tar -cf new.tar new с помощью команды tar -cf	 Создаем архив new.tar new  
+
+
+
+
+ 

@@ -1,0 +1,34 @@
+Перезапустить HTTP-сервер Nginx
+
+CentOS 7, Ubuntu 18.04 и Ubuntu16.04 являются systemd операционной системой.
+
+Чтобы перезапустить службу nginx, вам нужно использовать инструмент командной строки systemctl.
+
+Рекомендуется проверить синтаксис перед перезагрузкой службы nginx,
+
+$ sudo nginx -t
+$ sudo systemctl restart nginx
+
+Если вы перезагружаетесь после изменения файла конфига nginx, вам необходимо сначала перезагрузить systemd
+
+$ sudo systemctl daemon-reload
+
+Затем перезапустите nginx
+
+$ sudo systemctl restart nginx
+
+Если вы хотите перезагрузить конфигурацию без перезапуска службы, то для поддержания текущих сеансов используйте
+
+sudo systemctl reload nginx
+
+Перезапуск Nginx в системе Upstart / SysV init
+
+Если вы используете систему с upstart или системой SysV init. например, Ubuntu 14.04, CentOS 6, вам необходимо управлять службой nginx с помощью service
+
+$ sudo service nginx restart
+
+Вы также можете использовать абсолютный путь для скрипта инициализации, например
+
+sudo /etc/init.d/nginx restart
+
+

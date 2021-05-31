@@ -1,4 +1,4 @@
-from check_person.person_for_check import Person
+from PYtest.person.person import NameTooLong, Person
 import pytest
 from datetime import date
 

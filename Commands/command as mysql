@@ -104,7 +104,7 @@ insert into mytable (user_name, user_password, email, date_registered, in_activa
 
 truncate name_tablle;
 select distinct user_name from mytable;
-select * from mytable limit 2; 
+select * from mytable limit 2;
 select * from mytable where user_id=2 order by user_password limit 2;
 select * from mytable where user_id in (1,2,4);
 explain analyze select * from mytable where user_id=2 order by user_password limit 2;
@@ -114,11 +114,11 @@ select c.cl_name, t.user_name from classes c cross join third t; Кросс join
  select * from houseBook h natural join book b;
   select h.name_house, b.name_book from houseBook h inner join book b ON b.id_book = h.id_book; Обьединение аблиц  с учетом условия
   select h.name_house, b.name_book from houseBook h inner join book b where b.id_book = h.id_book;  ON -> where
-    select h.name_house, b.name_book from houseBook h left join book b on b.id_book = h.id_book;	
-    select name_house as "Издатель" from houseBook; 
-    
-    
-    
+    select h.name_house, b.name_book from houseBook h left join book b on b.id_book = h.id_book;
+    select name_house as "Издатель" from houseBook;
+
+
+
 select email as почта, count( email) from emloyees_clone group by(email) having count(email)>1;
 
 'dmurphy@classicmodelcars.com', '2'
@@ -176,6 +176,64 @@ create view caramba as select email as почта, count( email) from emloyees_c
 
 
 
+
+
+
+
+
+
+Как сделать дамп базы данных MySQL
+
+Любой кто начинает работать с MySQL может столкнуться с необходимостью создать полную копию базы данных, тоесть дамп. Чаще всего это необходимо для того чтобы скопировать ВСЮ структуру базы и иногда саими данные. Также дамп часто используется для того чтобы восстановить базу данных в случае «поломки» :-)
+
+Команда mysqldump — создание дампа
+
+Для того чтобы создать дамп — командная строка выглядит так:
+
+mysqldump -uUSER -pPASSWORD DB_NAME > FILE_NAME_TO_SAVE
+
+Где
+
+    -uUser — имя пользователя базы в формате типа -u[root]
+    -pPassword — пароль пользователя в формате типа -p[123456]
+    DB_NAME — имя базы данных
+    FILE_NAME_TO_SAVE — куда сохранять дамп
+
+В идеале ни имя пользователя ни пароль где либо сохранять не стоит, система сама спросит под кем логиниться. Так что простой вариант команды следующий:
+
+mysqldump -u -p DB_NAME > FILE_NAME_TO_SAVE
+
+Пример:
+
+mysqldump -uroot -p123456 mydb > dump.sql
+
+Эта комбинация создаст файл dump.sql в той папке в которой вы выполняете команду.
+
+Пакуем в zip:
+
+zip ./dump.zip ./dump.sql
+
+или в tar.gz:
+
+tar -pczf ./dump.tar.gz ./dump.sql
+
+Как восстановить базу данных из дампа
+
+Теперь сделаем восстановление базы данных из дампа.
+
+Для восстановления используем командный интерпретатор MySQL — команду с одноименным названием:
+
+mysql -uUSER -pPASSWORD -f mydb < mydb_dump.sql
+
+Часть < dump.sql отвечает за «закидывание» файла с SQL командами дампа в интерпретатор.
+
+Пример:
+
+mysql -uroot -p123456 -f mydb < dump.sql
+
+Для того чтобы указать кодировку данных в дампе нужно использовать ключ —default-character-set:
+
+mysql -uroot -p123456 -f --default-character-set=cp1251 mydb < dump.sql
 
 
 
