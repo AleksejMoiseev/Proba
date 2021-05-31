@@ -109,4 +109,73 @@ select * from mytable where user_id=2 order by user_password limit 2;
 select * from mytable where user_id in (1,2,4);
 explain analyze select * from mytable where user_id=2 order by user_password limit 2;
 create index myindex On orders(orderNumber);
+select c.cl_name, t.user_name from classes c cross join third t; Кросс join Обьединяет все со всеми
+ select h.name_house, b.name_book from houseBook h natural join book b;
+ select * from houseBook h natural join book b;
+  select h.name_house, b.name_book from houseBook h inner join book b ON b.id_book = h.id_book; Обьединение аблиц  с учетом условия
+  select h.name_house, b.name_book from houseBook h inner join book b where b.id_book = h.id_book;  ON -> where
+    select h.name_house, b.name_book from houseBook h left join book b on b.id_book = h.id_book;	
+    select name_house as "Издатель" from houseBook; 
+    
+    
+    
+select email as почта, count( email) from emloyees_clone group by(email) having count(email)>1;
+
+'dmurphy@classicmodelcars.com', '2'
+'mpatterso@classicmodelcars.com', '2'
+'jfirrelli@classicmodelcars.com', '4'
+'wpatterson@classicmodelcars.com', '2'
+'gbondur@classicmodelcars.com', '2'
+'abow@classicmodelcars.com', '2'
+'ljennings@classicmodelcars.com', '2'
+'lthompson@classicmodelcars.com', '2'
+'spatterson@classicmodelcars.com', '2'
+'ftseng@classicmodelcars.com', '2'
+'gvanauf@classicmodelcars.com', '2'
+'lbondur@classicmodelcars.com', '2'
+'ghernande@classicmodelcars.com', '2'
+'pcastillo@classicmodelcars.com', '2'
+'lbott@classicmodelcars.com', '2'
+'bjones@classicmodelcars.com', '2'
+'afixter@classicmodelcars.com', '2'
+'pmarsh@classicmodelcars.com', '2'
+'tking@classicmodelcars.com', '2'
+'mnishi@classicmodelcars.com', '2'
+'ykato@classicmodelcars.com', '2'
+'mgerard@classicmodelcars.com', '2'
+'Mag@mail.ru', '2'
+
+create view caramba as select email as почта, count( email) from emloyees_clone group by(email) having count(email)=4;
+
+Создаем  свое представление caramba которое является представлением команды  select email as почта, count( email) from emloyees_clone group by(email) having count(email)=4;
+
+теперь все можно заменить select * from caramba;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
