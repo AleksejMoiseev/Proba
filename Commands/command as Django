@@ -194,6 +194,27 @@ MyModel.objects.aggregate(cnt=Count("name_person", distinct=True))  Вывод �
 cat1 = MyModel.objects.values('name_person', 'age') Возвращает лист содержащий словари где ключ равен: 'name_person', 'age', работае как с листом и словарем
 
 
+Доступ к связанной модели:
+
+>>> s = Site.objects.filter(domain='admobex.com')
+>>> s
+<QuerySet [<Site: admobex.com>]>
+>>> s = Site.objects.get(domain='admobex.com')
+>>> s
+<Site: admobex.com>
+>>> s.user_set.all()
+<QuerySet [<User: moiseev_003_bk_ru_6>, <User: baenefa_mail_ru_6>, <User: milenalena2013_yandex_ru_6>, <User: mail_kamil-abzalov_ru_6>, <User: moiseev_a_v_hm997108_magnit_ru_6>, <User: admin_admobex_com>, <User: admin_ad-agency_com>, <User: test_admobex_com>]>
+>>> 
+
+
+s.user_set.filter(username='moiseev_003_bk_ru_6')   через filter
+
+
+>>> s.user_set.filter(username__icontains='moiseev')
+<QuerySet [<User: moiseev_003_bk_ru_6>, <User: moiseev_a_v_hm997108_magnit_ru_6>]>
+
+
+
 
 
 
