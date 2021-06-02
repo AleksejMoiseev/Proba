@@ -6,7 +6,7 @@ import json
 
 
 class Person:
-    def __init__(self, name):
+    def __init__(self, name, *args):
         self.name = name
 
     @property
@@ -29,6 +29,19 @@ class Person:
     @staticmethod
     def from_json(js):
         return json.loads(js)
+
+    def pprint(self):
+        print("вызов метода person")
+
+    def __getitem__(self, item):  # Позволяет оргазовать обращение к свойствам класса как Instance_Class['name']
+        print("Отработал метод __getitem__")
+        if item == 'name':
+            return self.name
+
+    def __setitem__(self, key, value):  # Перегрузка метода для обращению к свойствам как к словарю
+        print('Отработал метод __setitem__ ')
+        if key == "name":
+            self.name = value
 
 
 class CheckSettator:
@@ -70,4 +83,6 @@ if __name__ == '__main__':
     print(Person(**person))
     check = CheckSettator(name='AAlex')
     check.booo  # Вызывается метод def __getattr__(self, item):
-
+    print('Отработал метод ef __getitem__ ', p['name'])
+    p['name'] = 'Aleksej'
+    print('Отработал метод ef __getitem__ ', p['name'])
