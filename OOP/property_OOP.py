@@ -49,7 +49,7 @@ class CheckSettator:
     def __init__(self, name):
         self.name = name
 
-    def __setattr__(self, key, value):
+    def __setattr__(self, key, value):  # Автоматически вызывается при при изменении свойства  key класса
         print("key", key)
         print(('value', value))
         self.__dict__[key] = value
