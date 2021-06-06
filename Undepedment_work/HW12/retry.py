@@ -7,7 +7,7 @@ allowed_exceptions=(Exception, ),verbose=True)
 
 from functools import wraps
 import time
-from HW12.product_for_retry import Product, NothingToRetrieveException, retrieve_product
+from product_for_retry import Product, NothingToRetrieveException, retrieve_product
 
 
 class ProductNotFoundException(NothingToRetrieveException):
