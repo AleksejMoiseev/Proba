@@ -30,6 +30,9 @@ class Person:
     def from_json(js):
         return json.loads(js)
 
+    def print_dict(self, last_name):
+        return f'{last_name}, {self.name}'
+
     def pprint(self):
         print("вызов метода person")
 

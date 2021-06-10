@@ -19,6 +19,11 @@ class Individual(Person):
         print("вызываю метод в класе Individual")
         return "вызываю метод в класе Individual"
 
+    def print_dict(self, last_name):
+        print("Печатая новый принт")
+        return super().print_dict(last_name=last_name)
+
+
 
 class People:
     def __init__(self, student: Individual, description: str, discharge: int):  # Двоеточие означает, это анотация
@@ -33,3 +38,4 @@ if __name__ == '__main__':
     print(p.student)
     print(p.student.to_json())
     print(p.student.pprint())
+    print('ЗНАЧЕНИЕ', p.student.print_dict(last_name='MOISEEV'))
