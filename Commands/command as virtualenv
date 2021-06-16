@@ -9,3 +9,8 @@ virtualenv name_your_virtualenv
 Список виртуальных сред:
 
 1) testDJ;
+
+deactivate   -   Деактивация виртуальной среды
+
+
+
